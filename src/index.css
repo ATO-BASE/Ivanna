@@ -1,0 +1,354 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Spring Theme - Default */
+    --background: 140 30% 98%;
+    --foreground: 140 15% 15%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 140 15% 15%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 140 15% 15%;
+    
+    --primary: 140 50% 45%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 340 60% 88%;
+    --secondary-foreground: 340 40% 30%;
+    
+    --muted: 140 20% 95%;
+    --muted-foreground: 140 10% 45%;
+    
+    --accent: 340 70% 65%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 140 20% 88%;
+    --input: 140 20% 88%;
+    --ring: 140 50% 45%;
+    
+    --radius: 1rem;
+    
+    /* Seasonal Background Images */
+    --bg-image: url('/src/assets/bg-spring.jpg');
+    
+    /* Seasonal Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(140 50% 45% / 0.1), hsl(340 70% 65% / 0.1));
+    --gradient-card: linear-gradient(to bottom, hsl(0 0% 100%), hsl(140 30% 98%));
+    
+    /* Animations */
+    --transition-smooth: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  
+  /* Summer Theme */
+  [data-season="summer"] {
+    --background: 45 40% 96%;
+    --foreground: 25 30% 20%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 25 30% 20%;
+    
+    --primary: 200 80% 50%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 45 95% 60%;
+    --secondary-foreground: 25 30% 20%;
+    
+    --accent: 35 90% 55%;
+    --accent-foreground: 0 0% 100%;
+    
+    --muted: 45 30% 92%;
+    --muted-foreground: 25 20% 50%;
+    
+    --border: 45 30% 85%;
+    --input: 45 30% 85%;
+    --ring: 200 80% 50%;
+    
+    --radius: 0.5rem;
+    
+    --bg-image: url('/src/assets/bg-summer.jpg');
+    
+    --gradient-hero: linear-gradient(135deg, hsl(200 80% 50% / 0.1), hsl(45 95% 60% / 0.1));
+    --gradient-card: linear-gradient(to bottom, hsl(0 0% 100%), hsl(45 40% 96%));
+  }
+  
+  /* Fall Theme */
+  [data-season="fall"] {
+    --background: 25 35% 94%;
+    --foreground: 25 40% 18%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 25 40% 18%;
+    
+    --primary: 25 70% 45%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 15 60% 55%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --accent: 35 80% 50%;
+    --accent-foreground: 0 0% 100%;
+    
+    --muted: 25 25% 90%;
+    --muted-foreground: 25 20% 45%;
+    
+    --border: 25 25% 82%;
+    --input: 25 25% 82%;
+    --ring: 25 70% 45%;
+    
+    --radius: 0.75rem;
+    
+    --bg-image: url('/src/assets/bg-fall.jpg');
+    
+    --gradient-hero: linear-gradient(135deg, hsl(25 70% 45% / 0.1), hsl(15 60% 55% / 0.1));
+    --gradient-card: linear-gradient(to bottom, hsl(0 0% 100%), hsl(25 35% 94%));
+  }
+  
+  /* Winter Theme */
+  [data-season="winter"] {
+    --background: 210 25% 97%;
+    --foreground: 220 20% 25%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 25%;
+    
+    --primary: 210 70% 50%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 200 20% 85%;
+    --secondary-foreground: 220 20% 25%;
+    
+    --accent: 195 75% 55%;
+    --accent-foreground: 0 0% 100%;
+    
+    --muted: 210 20% 93%;
+    --muted-foreground: 210 15% 50%;
+    
+    --border: 210 20% 88%;
+    --input: 210 20% 88%;
+    --ring: 210 70% 50%;
+    
+    --radius: 0.25rem;
+    
+    --bg-image: url('/src/assets/bg-winter.jpg');
+    
+    --gradient-hero: linear-gradient(135deg, hsl(210 70% 50% / 0.1), hsl(195 75% 55% / 0.1));
+    --gradient-card: linear-gradient(to bottom, hsl(0 0% 100%), hsl(210 25% 97%));
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    transition: var(--transition-smooth);
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+  
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: hsl(var(--background) / 0.6);
+    z-index: -1;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Prevent small horizontal overflow when portal/dropdowns appear */
+  html, body, #root {
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+  
+  .card-gradient {
+    background: var(--gradient-card);
+  }
+  
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  /* Styles for About page carousel visuals */
+  .about-carousel {
+    transition: box-shadow 0.3s;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border: 4px double rgba(255, 255, 255, 0.2);
+  }
+
+  /* About intro scroll area */
+  .intro-scroll {
+    height: 14rem; /* approx 224px */
+    overflow-y: auto;
+    line-height: 1.6rem;
+    padding-right: 0.25rem; /* small spacing for scrollbar */
+  }
+
+  /* small flowing highlight used by progress indicators */
+  .progress-flow {
+    background: linear-gradient(90deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.28) 50%, rgba(255,255,255,0.08) 100%);
+    background-size: 200% 100%;
+    animation: progress-flow 1.8s linear infinite;
+  }
+
+  @keyframes progress-flow {
+    from { background-position: 200% 0; }
+    to { background-position: -200% 0; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .progress-flow { animation: none; }
+  }
+
+  /* FAQ & accordion enhancements */
+  .faq-trigger {
+    @apply w-full flex items-center justify-between rounded-lg px-4 py-3 text-left transition-transform ease-out duration-200;
+  }
+
+  .faq-item { @apply border-b; }
+
+  .faq-panel {
+    @apply overflow-hidden transition-all duration-300 px-4 pb-4 opacity-0 max-h-0;
+  }
+
+  .faq-panel.open {
+    @apply opacity-100 max-h-96;
+  }
+
+  .faq-open-bg {
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  }
+
+  /* larger chevron and smoother rotation */
+  .faq-chevron {
+    @apply w-5 h-5 text-muted-foreground transform transition-transform duration-200;
+  }
+
+  /* focus visible and highlight for keyboard users */
+  .faq-trigger:focus-visible { outline: 3px solid rgba(99,102,241,0.12); box-shadow: 0 0 0 4px rgba(99,102,241,0.08); }
+
+  /* Skill modal seasonal styling */
+  .skill-modal {
+    --modal-header-height: 84px;
+    display: grid;
+    grid-template-rows: var(--modal-header-height) 1fr;
+    gap: 12px;
+    padding: 18px 22px;
+  }
+
+  .skill-modal-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+  }
+
+  .skill-modal .avatar-large {
+    width: 72px;
+    height: 72px;
+    border-radius: 9999px;
+    object-fit: cover;
+    border: 3px solid rgba(255,255,255,0.18);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  }
+
+  .skill-modal .season-deco {
+    margin-left: auto;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 0.6rem;
+    color: white;
+    font-size: 22px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+  }
+
+  /* Season-specific decoration using the document data-season attribute */
+  [data-season='spring'] .skill-modal .season-deco { background: linear-gradient(135deg,#8bd3a5,#6bd3e6); }
+  [data-season='summer'] .skill-modal .season-deco { background: linear-gradient(135deg,#ffd36b,#ff8b6b); }
+  [data-season='fall']   .skill-modal .season-deco { background: linear-gradient(135deg,#ffb86b,#d0743f); }
+  [data-season='winter'] .skill-modal .season-deco { background: linear-gradient(135deg,#9fd3ff,#7a9bff); }
+
+  /* seasonal modal backdrops for extra polish */
+  [data-season='spring'] .skill-modal { background-image: radial-gradient(circle at 20% 20%, rgba(139,211,165,0.05), transparent 6%), radial-gradient(circle at 80% 80%, rgba(107,211,230,0.04), transparent 10%); }
+  [data-season='summer'] .skill-modal { background-image: radial-gradient(circle at 20% 20%, rgba(255,211,107,0.04), transparent 6%), radial-gradient(circle at 80% 80%, rgba(255,139,107,0.03), transparent 10%); }
+  [data-season='fall']   .skill-modal { background-image: radial-gradient(circle at 20% 20%, rgba(255,184,107,0.04), transparent 6%), radial-gradient(circle at 80% 80%, rgba(208,116,63,0.03), transparent 10%); }
+  [data-season='winter'] .skill-modal { background-image: radial-gradient(circle at 20% 20%, rgba(159,211,255,0.03), transparent 6%), radial-gradient(circle at 80% 80%, rgba(122,155,255,0.02), transparent 10%); }
+
+  /* modal body layout */
+  .skill-modal .skill-body {
+    display: grid;
+    gap: 10px;
+  }
+
+  .skill-modal .projects-list a { text-decoration: underline; }
+
+  .skill-modal .projects-list .project-item {
+    @apply flex items-center gap-3 p-2 rounded-md border border-transparent hover:border-border transition-shadow hover:shadow-sm;
+  }
+
+  [data-season='spring'] .skill-modal .projects-list .project-item { border-color: rgba(139,211,165,0.15); }
+  [data-season='summer'] .skill-modal .projects-list .project-item { border-color: rgba(255,211,107,0.14); }
+  [data-season='fall'] .skill-modal .projects-list .project-item   { border-color: rgba(255,184,107,0.12); }
+  [data-season='winter'] .skill-modal .projects-list .project-item { border-color: rgba(159,211,255,0.12); }
+
+  /* small seasonal sparkle animation */
+  .season-sparkle {
+    width: 10px;
+    height: 10px;
+    border-radius: 9999px;
+    opacity: 0.9;
+    transform-origin: center;
+    animation: sparkle 1.8s infinite linear;
+  }
+
+  [data-season='spring'] .skill-modal .season-sparkle { background: linear-gradient(180deg,#8bd3a5,#6bd3e6); }
+  [data-season='summer'] .skill-modal .season-sparkle { background: linear-gradient(180deg,#ffd36b,#ff8b6b); }
+  [data-season='fall'] .skill-modal .season-sparkle   { background: linear-gradient(180deg,#ffb86b,#d0743f); }
+  [data-season='winter'] .skill-modal .season-sparkle { background: linear-gradient(180deg,#9fd3ff,#7a9bff); }
+
+  @keyframes sparkle { 0% { transform: translateY(0) scale(1); } 50% { transform: translateY(-3px) scale(1.1); } 100% { transform: translateY(0) scale(1); } }
+
+  /* small vignette behind the modal content for depth */
+  .skill-modal::before {
+    content: '';
+    position: absolute;
+    inset: -8px;
+    border-radius: inherit;
+    background: radial-gradient(ellipse at 10% 10%, rgba(255,255,255,0.03), transparent 15%), radial-gradient(ellipse at 90% 90%, rgba(0,0,0,0.03), transparent 15%);
+    z-index: -1;
+    pointer-events: none;
+  }
+}

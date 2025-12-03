@@ -1,0 +1,61 @@
+{
+  "nav": {
+    "home": "主页",
+    "about": "关于我",
+    "projects": "项目",
+    "contact": "联系"
+  },
+  "landing": {
+    "greeting": "你好，我是",
+    "name": "叶丽莎维塔",
+    "title": "全栈 & Shopify 开发者",
+    "subtitle": "用现代技术打造美丽的数字体验"
+  },
+  "about": {
+    "title": "关于我",
+    "bio": "我是一名充满热情的全栈开发者，专注于React、Next.js和Shopify开发。凭借对设计的敏锐眼光和对简洁代码的热爱，我将想法变为现实。",
+    "skills": "技能",
+    "tools": "工具和技术",
+    "ideas": "项目创意"
+  },
+  "projects": {
+    "title": "我的项目",
+    "filter": {
+      "all": "全部",
+      "react": "React",
+      "next": "Next.js",
+      "html": "HTML/CSS",
+      "shopify": "Shopify",
+      "php": "PHP",
+      "laravel": "Laravel",
+      "wordpress": "WordPress"
+    },
+    "viewMore": "查看更多",
+    "viewCode": "查看代码",
+    "passwordTitle": "输入密码",
+    "passwordDescription": "请输入密码以查看源代码。",
+    "passwordPlaceholder": "密码",
+    "passwordError": "密码错误，请重试。",
+    "cancel": "取消",
+    "submit": "提交"
+  },
+  "contact": {
+    "title": "联系我",
+    "subtitle": "让我们一起工作",
+    "form": {
+      "name": "您的姓名",
+      "email": "您的邮箱",
+      "message": "您的留言",
+      "send": "发送消息"
+    },
+    "info": {
+      "email": "邮箱",
+      "location": "位置",
+      "phone": "电话"
+    }
+  },
+  "footer": {
+    "rights": "版权所有",
+    "built": "用❤️使用React & Tailwind构建"
+  }
+}

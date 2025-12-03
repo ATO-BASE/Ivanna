@@ -1,0 +1,61 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Me",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "landing": {
+    "greeting": "Hello, I'm",
+    "name": "Ivanna",
+    "title": "Full-Stack & Shopify Developer",
+    "subtitle": "Crafting beautiful digital experiences with modern technologies"
+  },
+  "about": {
+    "title": "About Me",
+    "bio": "I'm a passionate full-stack developer specializing in React, Next.js, and Shopify development. With a keen eye for design and a love for clean code, I bring ideas to life.",
+    "skills": "Skills",
+    "tools": "Tools & Technologies",
+    "ideas": "Project Ideas"
+  },
+  "projects": {
+    "title": "My Projects",
+    "filter": {
+      "all": "All",
+      "react": "React",
+      "next": "Next.js",
+      "html": "HTML/CSS",
+      "shopify": "Shopify",
+      "php": "PHP",
+      "laravel": "Laravel",
+      "wordpress": "WordPress"
+    },
+    "viewMore": "View More",
+    "viewCode": "View Code",
+    "passwordTitle": "Enter Password",
+    "passwordDescription": "Please enter the password to view the source code.",
+    "passwordPlaceholder": "Password",
+    "passwordError": "Incorrect password. Please try again.",
+    "cancel": "Cancel",
+    "submit": "Submit"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Let's work together",
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "message": "Your Message",
+      "send": "Send Message"
+    },
+    "info": {
+      "email": "Email",
+      "location": "Location",
+      "phone": "Phone"
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "built": "Built with ❤️ using React & Tailwind"
+  }
+}

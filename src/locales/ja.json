@@ -1,0 +1,61 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "about": "私について",
+    "projects": "プロジェクト",
+    "contact": "お問い合わせ"
+  },
+  "landing": {
+    "greeting": "こんにちは、私は",
+    "name": "エリザベータ",
+    "title": "フルスタック & Shopify 開発者",
+    "subtitle": "最新技術で美しいデジタル体験を創造します"
+  },
+  "about": {
+    "title": "私について",
+    "bio": "React、Next.js、Shopify開発を専門とする情熱的なフルスタック開発者です。デザインへの鋭い目とクリーンなコードへの愛を持って、アイデアを実現します。",
+    "skills": "スキル",
+    "tools": "ツールと技術",
+    "ideas": "プロジェクトのアイデア"
+  },
+  "projects": {
+    "title": "私のプロジェクト",
+    "filter": {
+      "all": "すべて",
+      "react": "React",
+      "next": "Next.js",
+      "html": "HTML/CSS",
+      "shopify": "Shopify",
+      "php": "PHP",
+      "laravel": "Laravel",
+      "wordpress": "WordPress"
+    },
+    "viewMore": "もっと見る",
+    "viewCode": "コードを見る",
+    "passwordTitle": "パスワードを入力",
+    "passwordDescription": "ソースコードを表示するにはパスワードを入力してください。",
+    "passwordPlaceholder": "パスワード",
+    "passwordError": "パスワードが正しくありません。もう一度お試しください。",
+    "cancel": "キャンセル",
+    "submit": "送信"
+  },
+  "contact": {
+    "title": "お問い合わせ",
+    "subtitle": "一緒に働きましょう",
+    "form": {
+      "name": "お名前",
+      "email": "メールアドレス",
+      "message": "メッセージ",
+      "send": "送信"
+    },
+    "info": {
+      "email": "メール",
+      "location": "所在地",
+      "phone": "電話"
+    }
+  },
+  "footer": {
+    "rights": "全著作権所有",
+    "built": "React & Tailwindで❤️を込めて構築"
+  }
+}

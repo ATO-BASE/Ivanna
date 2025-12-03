@@ -1,0 +1,61 @@
+{
+  "nav": {
+    "home": "Головна",
+    "about": "Про мене",
+    "projects": "Проєкти",
+    "contact": "Контакти"
+  },
+  "landing": {
+    "greeting": "Привіт, я",
+    "name": "Єлізавета",
+    "title": "Full-Stack & Shopify Розробниця",
+    "subtitle": "Створюю красиві цифрові рішення з сучасними технологіями"
+  },
+  "about": {
+    "title": "Про мене",
+    "bio": "Я пристрасна full-stack розробниця, що спеціалізується на React, Next.js та Shopify. З гострим поглядом на дизайн та любов'ю до чистого коду, я втілюю ідеї в життя.",
+    "skills": "Навички",
+    "tools": "Інструменти та технології",
+    "ideas": "Ідеї проєктів"
+  },
+  "projects": {
+    "title": "Мої проєкти",
+    "filter": {
+      "all": "Всі",
+      "react": "React",
+      "next": "Next.js",
+      "html": "HTML/CSS",
+      "shopify": "Shopify",
+      "php": "PHP",
+      "laravel": "Laravel",
+      "wordpress": "WordPress"
+    },
+    "viewMore": "Дивитись більше",
+    "viewCode": "Дивитись код",
+    "passwordTitle": "Введіть пароль",
+    "passwordDescription": "Будь ласка, введіть пароль, щоб переглянути вихідний код.",
+    "passwordPlaceholder": "Пароль",
+    "passwordError": "Неправильний пароль. Спробуйте ще раз.",
+    "cancel": "Скасувати",
+    "submit": "Відправити"
+  },
+  "contact": {
+    "title": "Зв'яжіться зі мною",
+    "subtitle": "Давайте працювати разом",
+    "form": {
+      "name": "Ваше ім'я",
+      "email": "Ваш Email",
+      "message": "Ваше повідомлення",
+      "send": "Надіслати"
+    },
+    "info": {
+      "email": "Email",
+      "location": "Місцезнаходження",
+      "phone": "Телефон"
+    }
+  },
+  "footer": {
+    "rights": "Всі права захищені",
+    "built": "Зроблено з ❤️ використовуючи React & Tailwind"
+  }
+}
